@@ -1,4 +1,4 @@
-# README
+# DOCKER COMPOSE - Eclipse/Mosquitto MQTT Broker
 
 ## Summary
 
