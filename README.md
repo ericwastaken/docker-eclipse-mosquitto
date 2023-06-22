@@ -12,6 +12,11 @@ This is a Docker Compose project that will build and run a Mosquitto MQTT broker
 
 ## Usage
 
+### Before Starting
+
+1. Provide TLS certs in **./mosquitto/secrets**. See **./mosquitto/secrets/README - secrets.md** for details.
+2. Provide a password file in **./mosquitto/secrets**. See **./mosquitto/secrets/README - secrets.md** for details.
+
 ### CONTAINER START
 Start the container with the following command:
 
