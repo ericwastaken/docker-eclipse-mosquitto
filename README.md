@@ -9,6 +9,7 @@ This is a Docker Compose project that will build and run a Mosquitto MQTT broker
 * Docker must be installed on the host system.
 * The host must have internet access to build the initial image. (See "Offline Usage" below if you need to use this in an offline environment.)
 * Docker Build will use **eclipse-mosquitto:2.0.15** from Docker Hub. Edit the **Dockerfile** to change the version if needed.
+* (Optional) If you plan to use the included TLS generation script, you'll also need Python 3.6 or later with openssl. These are only used when you run the TLS generation script and are not needed to otherwise build or run the container.
 
 ## Usage
 

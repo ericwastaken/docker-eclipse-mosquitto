@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # This script uses the TLS-GEN library to generate self-signed
-# TLS certs suitable to use for RMQ. The certificates will be
-# copied to the RMQ Secrets directory after creation!
+# TLS certs. The certificates will be
+# copied to the secrets directory after creation!
 #
-# You can change the domain to suit your needs!
+# You are prompted for the domain to suit your needs!
 #
 # Learn more about TLS-GEN at https://github.com/michaelklishin/tls-gen
 #
