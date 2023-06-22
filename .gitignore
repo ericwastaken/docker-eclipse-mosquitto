@@ -1,0 +1,4 @@
+/mosquitto/data/
+/mosquitto/log/
+/mosquitto/secrets/
+!/mosquitto/secrets/README - secrets.md

@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    build:
+      context: ./mosquitto
+    container_name: mosquitto
+    restart: unless-stopped
+    ports:
+      # If not using TLS, see corresponding entry in mosquitto.conf
+      #- "1883:1883"
+      # If using TLS, see corresponding entry in mosquitto.conf
+      - "8883:8883"
+    volumes:
+      # BIND the config file for Mosquitto
+      - ./mosquitto/config:/mosquitto/config
+      # Bind the TLS Certs
+      - ./mosquitto/secrets/ca_certificate.pem:/mosquitto/secrets/ca_certificate.pem
+      - ./mosquitto/secrets/server_certificate.pem:/mosquitto/secrets/server_certificate.pem
+      - ./mosquitto/secrets/server_key.pem:/mosquitto/secrets/server_key.pem
+      # Bind the data persistence directory
+      - ./mosquitto/data:/mosquitto/data
+      # Bind the log directory
+      - ./mosquitto/log:/mosquitto/log
+    environment:
+      - TZ=America/New_York
+    command: mosquitto -c /mosquitto/config/mosquitto.conf
