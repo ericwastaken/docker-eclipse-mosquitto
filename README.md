@@ -51,3 +51,10 @@ If you need to use this container on a server that does not have Internet, you c
   ```
 * Start the container on the offline server as described above.
 
+## Clients
+
+After the mosquitto broker is up, connect to it with any mosquitto client. 
+
+I recommend the very fine MQTT Explorer: https://mqtt-explorer.com/.
+
+> **Note:** If you used self-signed certs, remember to pass the CA cert to your client so that it may do certificate validation for you.
